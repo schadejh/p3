@@ -3,6 +3,7 @@
 --
 -- Name: James Schader
 -- 20220225
+-- First: get repo on stu synced with home
 
 module P3 where
 
