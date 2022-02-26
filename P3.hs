@@ -31,8 +31,8 @@ primeFactors n = []
 primesUpTo :: Integral a => a -> [a]
 primesUpTo n
   | n == 1 = []
-  | isPrime n = [n] ++ primesUpTo[n-1]
-  | otherwise = primesUpTo[n-1]
+  | isPrime n = [n] ++ primesUpTo (n-1)
+  | otherwise = primesUpTo (n-1)
 -- COMPLETE
 
 -- True iff n is a perfect number.
