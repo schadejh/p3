@@ -22,7 +22,7 @@ isPrime n
 
 -- A list of all prime factors of n.
 primeFactors :: Integral a => a -> [a]
-primeFactors n = (\n -> isPrime n) factors n
+primeFactors n = (\n -> isPrime n) (factors n)
 -- COMPLETE
 
 -- A list of primes up to n.
