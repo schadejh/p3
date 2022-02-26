@@ -21,7 +21,7 @@ isPrime n = factors n == [1,n]
 -- A list of all prime factors of n.
 primeFactors :: Integral a => a -> [a]
 primeFactors n = filter (\x -> isPrime x) (factors n)
--- NOT DONE
+-- COMPLETE
 
 -- A list of primes up to n.
 primesUpTo :: Integral a => a -> [a]
@@ -52,6 +52,7 @@ nextPrime n
 -- A list of the first n primes.
 generatePrimes :: Integral a => a -> [a]
 generatePrimes n
+  | n > 1 = generatePrimes (n-1) : nextPrime (last generatePrimes (n-1))
+  | n ==1 = 2
   | n < 1 = []
-  | n ==1 = [2]
 -- NOT DONE
