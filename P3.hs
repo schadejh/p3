@@ -8,8 +8,8 @@
 module P3 where
 
 -- taken from StackOverflow, HostileFork says dont trust SE
-factorList :: a -> [a]
-factorList value = factorsGreaterOrEqual 1
+factors :: Integral a => a -> [a]
+factors value = factorsGreaterOrEqual 1
   where
     factorsGreaterOrEqual test
       | (test == value) = [value]
@@ -18,8 +18,8 @@ factorList value = factorsGreaterOrEqual 1
       where restOfFactors = factorsGreaterOrEqual (test + 1)
 
 -- A list of all factors of n.
-factors :: Integral a => a -> [a]
-factors n = factorList n
+--factors :: Integral a => a -> [a]
+--factors n = factorList n
 -- NOT DONE
 
 -- True iff n is prime.
