@@ -38,7 +38,7 @@ primesUpTo n
 -- True iff n is a perfect number.
 -- A number n is perfect if the sum of its factors is 2*n.
 isPerfect :: Integral a => a -> Bool
-isPerfect n = 2*n == (sum factors n)
+isPerfect n = 2*n == sum (factors n)
 -- COMPLETE
 
 -- A list of all perfect numbers up to n.
