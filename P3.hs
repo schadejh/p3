@@ -18,7 +18,7 @@ factorList value = factorsGreaterOrEqual 1
       where restOfFactors = factorsGreaterOrEqual (test + 1)
 
 -- A list of all factors of n.
-factors :: Integral a => Int -> [Int]
+factors :: Integral a => a -> [a]
 factors n = factorList n
 -- NOT DONE
 
