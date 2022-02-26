@@ -10,11 +10,13 @@ module P3 where
 -- A list of all factors of n.
 -- taken from StackOverflow, HostileFork says dont trust SE
 factors :: Integral a => a -> [a]
-factors value
-      | (1 == value) = [value]
-      | (value `mod` 1 == 0) = 1 : restOfFactors
+factors value = factorsGreaterOrEqual 1
+  where
+    factorsGreaterOrEqual test
+      | (test == value) = [value]
+      | (value `mod` test == 0) = test : restOfFactors
       | otherwise = restOfFactors
-      where restOfFactors = factorsGreaterOrEqual (1 + 1)
+      where restOfFactors = factorsGreaterOrEqual (test + 1)
 -- COMPLETE
 
 -- True iff n is prime.
