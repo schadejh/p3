@@ -47,7 +47,7 @@ isPerfect n = 2*n == sum (factors n)
 
 -- A list of all perfect numbers up to n.
 perfectUpTo :: Integral a => a -> [a]
-perfectUpTo n = filter isPerfect [0..n]
+perfectUpTo n = filter isPerfect [1..n]
 -- COMPLETE
 
 -- The next prime greater than n.
