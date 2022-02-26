@@ -8,7 +8,7 @@
 module P3 where
 
 -- taken from StackOverflow, HostileFork says dont trust SE
-factorList :: Int -> [Int]
+factorList :: a -> [a]
 factorList value = factorsGreaterOrEqual 1
   where
     factorsGreaterOrEqual test
