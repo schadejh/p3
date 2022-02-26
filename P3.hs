@@ -52,7 +52,7 @@ nextPrime n
 -- A list of the first n primes.
 generatePrimes :: Integral a => a -> [a]
 generatePrimes n
-  | n > 1 = generatePrimes (n-1) : nextPrime (last generatePrimes (n-1))
+  | n > 1 = generatePrimes (n-1) : nextPrime (last (generatePrimes (n-1)))
   | n ==1 = 2
   | n < 1 = []
 -- NOT DONE
