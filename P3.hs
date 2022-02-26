@@ -12,26 +12,28 @@ factors :: Integral a => a -> [a]
 factors n
   | n < 1 = []
   | n ==1 = [1]
-  | otherwise = [-1] -- NOT DONE
+  | otherwise = [-1]
+-- NOT DONE
 
 -- True iff n is prime.
 isPrime :: Integral a => a -> Bool
 isPrime n
   | n < 2 = False
-  | otherwise = True -- NOT DONE
+  | otherwise = True
+-- NOT DONE
 
 -- A list of all prime factors of n.
 primeFactors :: Integral a => a -> [a]
-primeFactors n = (\n -> isPrime n) (factors n)
--- COMPLETE
+primeFactors n = []
+-- NOT DONE
 
 -- A list of primes up to n.
 primesUpTo :: Integral a => a -> [a]
-primesUpTo n = []
--- loop 0..n
---   if i isPrime, append to list
--- end loop
--- return list
+primesUpTo n
+  | n == 1 = []
+  | isPrime n = [n] ++ primesUpTo[n-1]
+  | otherwise = primesUpTo[n-1]
+-- COMPLETE
 
 -- True iff n is a perfect number.
 -- A number n is perfect if the sum of its factors is 2*n.
