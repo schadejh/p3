@@ -21,8 +21,9 @@ factors value = factorsGreaterOrEqual 1
 
 -- True iff n is prime.
 isPrime :: Integral a => a -> Bool
-isPrime k = if k > 1 then null [ x | x <- [2..sqrt k], k `mod` x == 0] else False
-
+isPrime n
+  | n < 2 = False
+  | otherwise = True
 -- NOT DONE
 
 -- A list of all prime factors of n.
